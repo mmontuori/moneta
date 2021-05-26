@@ -1,0 +1,1 @@
+#define QUARK_REWARD 500

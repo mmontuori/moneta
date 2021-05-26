@@ -47,6 +47,8 @@
 #include <boost/algorithm/string/join.hpp>
 #include <boost/thread.hpp>
 
+#include <quarkcoin/quarkcoin.h>
+
 #if defined(NDEBUG)
 # error "Litecoin cannot be compiled without assertions."
 #endif
@@ -1149,7 +1151,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     if (halvings >= 64)
         return 0;
 
-    CAmount nSubsidy = 50 * COIN;
+    CAmount nSubsidy = QUARK_REWARD * COIN;
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
     return nSubsidy;
