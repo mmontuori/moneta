@@ -1164,7 +1164,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 
     // SUBSIDY IS NOT CUT IN QUARK TO ALWAYS ALLOW AND INCENTIVATE MIMING
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
-    nSubsidy >>= halvings;
+    // nSubsidy >>= halvings;
     return nSubsidy;
 }
 
