@@ -1159,7 +1159,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 
     // QUARK REWARDS EVERY 5000 BOCKS A BIGGER ONE TIME SUBSIDY TO THE WINNIMG MINER
     if ( (nHeight % 10) == 0) {
-        nSubsidy = QUARK_INCENTIVE_REWARD;
+        nSubsidy = QUARK_INCENTIVE_REWARD * COIN;
     }
 
     // SUBSIDY IS NOT CUT IN QUARK TO ALWAYS ALLOW AND INCENTIVATE MIMING
