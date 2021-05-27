@@ -1146,15 +1146,23 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
-    int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
+    // NO HALVING IS IMPLEMENTED FOR QUARK
+    // int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
     // Force block reward to zero when right shift is undefined.
-    if (halvings >= 64)
-        return 0;
+    // if (halvings >= 64)
+    //    return 0;
 
     if (nHeight == 1) {
         return QUARK_BLOCK_ONE_REWARD * COIN;
     }
     CAmount nSubsidy = QUARK_REWARD * COIN;
+
+    // QUARK REWARDS EVERY 5000 BOCKS A BIGGER ONE TIME SUBSIDY TO THE WINNIMG MINER
+    if ( (nHeight % 10) == 0) {
+        nSubsidy = QUARK_INCENTIVE_REWARD;
+    }
+
+    // SUBSIDY IS NOT CUT IN QUARK TO ALWAYS ALLOW AND INCENTIVATE MIMING
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
     return nSubsidy;
