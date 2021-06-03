@@ -310,7 +310,7 @@ public:
         pchMessageStart[1] = 0xbf;
         pchMessageStart[2] = 0xb5;
         pchMessageStart[3] = 0xda;
-        nDefaultPort = 19444;
+        nDefaultPort = QUARK_REGTEST_PORT;
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1296688602, 0, 0x207fffff, 1, QUARK_REWARD * COIN);
