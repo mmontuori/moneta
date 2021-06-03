@@ -122,7 +122,7 @@ public:
         nDefaultPort = QUARK_MAINNET_PORT;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(QUARK_TIME_STAMP, 2084524493, 0x1e0ffff0, 1, QUARK_REWARD * COIN);
+        genesis = CreateGenesisBlock(QUARK_TIME_STAMP, QUARK_MAIN_NONCE, QUARK_BITS, 1, QUARK_REWARD * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S(QUARK_MAIN_GENESIS_HASH));
         assert(genesis.hashMerkleRoot == uint256S(QUARK_MERKLE_HASH));
@@ -227,7 +227,7 @@ public:
         nDefaultPort = QUARK_TESTNET_PORT;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1486949366, 293345, 0x1e0ffff0, 1, QUARK_REWARD * COIN);
+        genesis = CreateGenesisBlock(1486949366, QUARK_TEST_NONCE, QUARK_BITS, 1, QUARK_REWARD * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S(QUARK_TEST_GENESIS_HASH));
         assert(genesis.hashMerkleRoot == uint256S(QUARK_MERKLE_HASH));
@@ -313,7 +313,7 @@ public:
         nDefaultPort = QUARK_REGTEST_PORT;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1296688602, 0, 0x207fffff, 1, QUARK_REWARD * COIN);
+        genesis = CreateGenesisBlock(1296688602, QUARK_REGTEST_NONCE, 0x207fffff, 1, QUARK_REWARD * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S(QUARK_REGTEST_GENESIS_HASH));
         assert(genesis.hashMerkleRoot == uint256S(QUARK_MERKLE_HASH));
