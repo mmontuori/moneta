@@ -47,7 +47,7 @@
 #include <boost/algorithm/string/join.hpp>
 #include <boost/thread.hpp>
 
-#include <quarkcoin/quarkcoin.h>
+#include <moneta/moneta.h>
 
 #if defined(NDEBUG)
 # error "Litecoin cannot be compiled without assertions."
@@ -1153,13 +1153,13 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     //    return 0;
 
     if (nHeight == 1) {
-        return QUARK_BLOCK_ONE_REWARD * COIN;
+        return MONETA_BLOCK_ONE_REWARD * COIN;
     }
-    CAmount nSubsidy = QUARK_REWARD * COIN;
+    CAmount nSubsidy = MONETA_REWARD * COIN;
 
     // QUARK REWARDS EVERY 5000 BOCKS A BIGGER ONE TIME SUBSIDY TO THE WINNIMG MINER
-    if ( (nHeight % QUARK_BLOCK_REWARD_COUNT ) == 0) {
-        nSubsidy = QUARK_INCENTIVE_REWARD * COIN;
+    if ( (nHeight % MONETA_BLOCK_REWARD_COUNT ) == 0) {
+        nSubsidy = MONETA_INCENTIVE_REWARD * COIN;
     }
 
     // SUBSIDY IS NOT CUT IN QUARK TO ALWAYS ALLOW AND INCENTIVATE MIMING
