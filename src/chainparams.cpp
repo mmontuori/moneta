@@ -108,7 +108,7 @@ public:
         consensus.nMinimumChainWork = uint256S(QUARK_MINIMUM_CHAIN_WORK_MAIN);
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x66f49ad85624c33e4fd61aa45c54012509ed4a53308908dd07f56346c7939273"); //1441280
+        consensus.defaultAssumeValid = uint256S(QUARK_MAIN_GENESIS_HASH); //1441280
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -218,7 +218,7 @@ public:
         consensus.nMinimumChainWork = uint256S(QUARK_MINIMUM_CHAIN_WORK_TEST);
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x1efb29c8187d5a496a33377941d1df415169c3ce5d8c05d055f25b683ec3f9a3"); //612653
+        consensus.defaultAssumeValid = uint256S(QUARK_TEST_GENESIS_HASH); //612653
 
         pchMessageStart[0] = 0xfd;
         pchMessageStart[1] = 0xd2;
