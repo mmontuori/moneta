@@ -115,10 +115,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xfb;
-        pchMessageStart[1] = 0xc0;
-        pchMessageStart[2] = 0xb6;
-        pchMessageStart[3] = 0xdb;
+        pchMessageStart[0] = MONETA_PCH_MESSAGE_START_0;
+        pchMessageStart[1] = MONETA_PCH_MESSAGE_START_1;
+        pchMessageStart[2] = MONETA_PCH_MESSAGE_START_2;
+        pchMessageStart[3] = MONETA_PCH_MESSAGE_START_3;
         nDefaultPort = MONETA_MAINNET_PORT;
         nPruneAfterHeight = 100000;
 
@@ -128,7 +128,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S(MONETA_MERKLE_HASH));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        // vSeeds.emplace_back("seed-a.litecoin.loshan.co.uk");
+        vSeeds.emplace_back(MONETA_SEEDNODE_0);
         // vSeeds.emplace_back("dnsseed.thrasher.io");
         // vSeeds.emplace_back("dnsseed.litecointools.com");
         // vSeeds.emplace_back("dnsseed.litecoinpool.org");
@@ -220,10 +220,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S(MONETA_TEST_GENESIS_HASH); //612653
 
-        pchMessageStart[0] = 0xfd;
-        pchMessageStart[1] = 0xd2;
-        pchMessageStart[2] = 0xc8;
-        pchMessageStart[3] = 0xf1;
+        pchMessageStart[0] = MONETA_PCH_MESSAGE_START_TEST_0;
+        pchMessageStart[1] = MONETA_PCH_MESSAGE_START_TEST_1;
+        pchMessageStart[2] = MONETA_PCH_MESSAGE_START_TEST_2;
+        pchMessageStart[3] = MONETA_PCH_MESSAGE_START_TEST_3;
         nDefaultPort = MONETA_TESTNET_PORT;
         nPruneAfterHeight = 1000;
 
@@ -235,7 +235,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        // vSeeds.emplace_back("testnet-seed.litecointools.com");
+        vSeeds.emplace_back(MONETA_SEEDNODE_TEST_0);
         // vSeeds.emplace_back("seed-b.litecoin.loshan.co.uk");
         // vSeeds.emplace_back("dnsseed-testnet.thrasher.io");
 
