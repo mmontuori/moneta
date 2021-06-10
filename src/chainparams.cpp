@@ -317,7 +317,7 @@ public:
 
         UpdateVersionBitsParametersFromArgs(args);
 
-        genesis = CreateGenesisBlock(1296688602, MONETA_REGTEST_NONCE,, 0x207fffff, 1, MONETA_REWARD * COIN);
+        genesis = CreateGenesisBlock(1296688602, MONETA_REGTEST_NONCE, 0x207fffff, 1, MONETA_REWARD * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S(MONETA_REGTEST_GENESIS_HASH));
         assert(genesis.hashMerkleRoot == uint256S(MONETA_MERKLE_HASH));
