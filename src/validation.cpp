@@ -47,6 +47,9 @@
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/thread.hpp>
 
+// MMontuori Moneta CCC
+#include <moneta/moneta.h>
+
 #if defined(NDEBUG)
 # error "Litecoin cannot be compiled without assertions."
 #endif
@@ -1153,14 +1156,27 @@ bool ReadRawBlockFromDisk(std::vector<uint8_t>& block, const CBlockIndex* pindex
 
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
-    int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
+    // MMontuori Moneta CCC
+    
+    // NO HALVING IS IMPLEMENTED FOR MONETA
+    // int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
     // Force block reward to zero when right shift is undefined.
-    if (halvings >= 64)
-        return 0;
+    // if (halvings >= 64)
+    //    return 0;
 
-    CAmount nSubsidy = 50 * COIN;
+    if (nHeight == 1) {
+        return MONETA_BLOCK_ONE_REWARD * COIN;
+    }
+    CAmount nSubsidy = MONETA_REWARD * COIN;
+
+    // QUARK REWARDS EVERY 5000 BOCKS A BIGGER ONE TIME SUBSIDY TO THE WINNIMG MINER
+    if ( (nHeight % MONETA_BLOCK_REWARD_COUNT ) == 0) {
+        nSubsidy = MONETA_INCENTIVE_REWARD * COIN;
+    }
+
+    // SUBSIDY IS NOT CUT IN QUARK TO ALWAYS ALLOW AND INCENTIVATE MIMING
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
-    nSubsidy >>= halvings;
+    // nSubsidy >>= halvings;
     return nSubsidy;
 }
 

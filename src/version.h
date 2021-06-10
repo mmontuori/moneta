@@ -5,11 +5,14 @@
 #ifndef BITCOIN_VERSION_H
 #define BITCOIN_VERSION_H
 
+// MMontuori Moneta CCC
+#include <moneta/moneta.h>
+
 /**
  * network protocol versioning
  */
 
-static const int PROTOCOL_VERSION = 70015;
+static const int PROTOCOL_VERSION = MONETA_PROTOCOL_VERSION;
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
