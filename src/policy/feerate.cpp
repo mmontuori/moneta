@@ -10,7 +10,7 @@
 // MMontuori Moneta CCC
 #include <moneta/moneta.h>
 
-const std::string CURRENCY_UNIT = "LTC";
+const std::string CURRENCY_UNIT = "MNTA";
 
 CFeeRate::CFeeRate(const CAmount& nFeePaid, size_t nBytes_)
 {
@@ -30,7 +30,7 @@ CAmount CFeeRate::GetFee(size_t nBytes_) const
     int64_t nSize = int64_t(nBytes_);
 
     // MMontuori Moneta CCC
-    // Moneta fee ration is 5x cheaper than Litecoin
+    // Moneta fee ration is 5x cheaper than Moneta
     CAmount nFee = nSatoshisPerK * nSize / MONETA_FEE_RATIO;
 
     if (nFee == 0 && nSize != 0) {
