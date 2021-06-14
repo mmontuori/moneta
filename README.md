@@ -1,35 +1,38 @@
 Moneta (https://moneta.misas.us)
 ===
 
+
 What is Moneta?
 ---
-Moneta is a digital currency, also known as crypto currency which enables instant payments to anyone, anywhere in the world. Moneta uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. Moneta Core is the name of open source
-software which enables the use of this currency.
+**Moneta** is a digital currency, also known as crypto currency which enables instant payments to anyone, anywhere in the world. Moneta uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. Moneta Core is the name of the open source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
 the Moneta Core software, see [https://moneta.misas.us](https://moneta.misas.us).
 
-The project is a fork of Bitcoin/Moneta, it's based on the same proven and reliable core, but with major differences:
-* Bigger total supply of 21,000,000,000 for a longer production and a more factual value and availability for real transactions
+The project is a fork of Bitcoin/Litecoin, it's based on the same proven and reliable core, but with major differences:
+* Bigger total supply of **21,000,000,000** for a longer production, a more factual value, and availability for real transactions
 * Higher incentives for miners:
-    * 500 Moneta per block award insteaf of 50
-    * Lottery reward block of 5000 for every mined block multiple of 5000. This is an exclusive feature of Moneta
-    * No Halving. Miners are always rewarded the full amount
-* Transaction fees as 5x cheaper than Moneta. Making the transactions very affordable for the consumers
+    * **500** Monete per block award insteaf of 50
+    * Lottery reward block of **5000** Monete for every mined block multiple of 5000. This is an exclusive feature of Moneta
+    * **No Halving**. Miners are always rewarded the full amount
+* Transaction fees as **5x cheaper** than Litecoin. Making the transactions very affordable for the consumers
 * Built on the very reliable and proven Bitcoin blockchain
-* Ability to turn off transaction fees for private ecomony implementations
+* Ability to turn off transaction fees for private ecomony implementations (for private implementations, contact the development team)
+
 
 Who is behind Moneta?
 ---------------------
-[Michael Montuori](https://github.com/mmontuori) is the main developer of Moneta. He has over 30 years of experience. His public credentials are listed in his [public resume](https://registry.jsonresume.org/mmontuori).
+[Michael Montuori](https://github.com/mmontuori) is the main developer behind Moneta. Michael has over 30 years of experience. His public credentials are listed in his [public resume](https://registry.jsonresume.org/mmontuori).
 
-Other developers and testers are:
-* PUT NAMES 
+Other developers, contributors, and testers:
+* Pino Caci
+
 
 License
 -------
 Moneta Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
+
 
 Development Process
 -------------------
@@ -45,6 +48,7 @@ should be used to discuss complicated or controversial changes before working
 on a patch set.
 
 Developer IRC can be found on Freenode at #moneta-dev.
+
 
 Testing
 -------
@@ -72,6 +76,7 @@ Changes should be tested by somebody other than the developer who wrote the
 code. This is especially important for large or high-risk changes. It is useful
 to add a test plan to the pull request description if testing the changes is
 not straightforward.
+
 
 Translations
 ------------
