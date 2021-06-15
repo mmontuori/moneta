@@ -12,12 +12,13 @@ the Moneta Core software, see [https://moneta.misas.us](https://moneta.misas.us)
 The project is a fork of Bitcoin/Litecoin, it's based on the same proven and reliable core, but with major differences:
 * Bigger total supply of **21,000,000,000** for a longer production, a more factual value, and availability for real transactions
 * Higher incentives for miners:
-    * **500** Monete per block award insteaf of 50
+    * **500** Monete per block award instead of 50
     * Lottery reward block of **5000** Monete for every mined block multiple of 5000. This is an exclusive feature of Moneta
     * **No Halving**. Miners are always rewarded the full amount
+    * Easier technical adoption than many other digital currency
 * Transaction fees as **5x cheaper** than Litecoin. Making the transactions very affordable for the consumers
 * Built on the very reliable and proven Bitcoin blockchain
-* Ability to turn off transaction fees for private ecomony implementations (for private implementations, contact the development team)
+* Ability to turn off transaction fees for private economy implementations (for private implementations, contact the development team)
 
 
 Who is behind Moneta?
