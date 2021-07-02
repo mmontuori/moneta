@@ -124,6 +124,7 @@ public:
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
         vSeeds.emplace_back(MONETA_SEEDNODE_0);
+        vSeeds.emplace_back(MONETA_SEEDNODE_1);
         // vSeeds.emplace_back("dnsseed.thrasher.io");
         // vSeeds.emplace_back("dnsseed.monetatools.com");
         // vSeeds.emplace_back("dnsseed.monetapool.org");

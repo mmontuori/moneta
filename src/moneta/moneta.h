@@ -47,9 +47,10 @@
 #define MONETA_REGTEST_BIP65HEIGHT 1351
 #define MONETA_REGTEST_BIP66HEIGHT 1251
 
-#define MONETA_SEEDNODE_0 "moneta-seed.misas.us"
+#define MONETA_SEEDNODE_0 "dnsseed.misas.us"
+#define MONETA_SEEDNODE_1 "dnsseed2.misas.us"
 
-#define MONETA_SEEDNODE_TEST_0 "moneta-seed.misas.us"
+#define MONETA_SEEDNODE_TEST_0 "dnsseed.misas.us"
 
 #define MONETA_PCH_MESSAGE_START_TEST_0 0xfd
 #define MONETA_PCH_MESSAGE_START_TEST_1 0xd2
